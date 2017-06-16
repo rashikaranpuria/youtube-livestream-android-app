@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar
+FILE_HASH=593e8f32e1242319b216211776fd116f419a7851
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true

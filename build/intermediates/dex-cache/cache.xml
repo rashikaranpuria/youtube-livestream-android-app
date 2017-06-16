@@ -1,0 +1,215 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.code.findbugs/jsr305/1.3.9/40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf/jsr305-1.3.9.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="40719ea6961c0cb6afaeb6a921eaa1f6afd4cfdf">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/19.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/Android/Sdk/extras/android/m2repository/com/android/support/support-annotations/23.0.0/support-annotations-23.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="990e7f98a7bad86a40b1f0bcfeb039023afd0839">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/14.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client/1.22.0/d441fc58329c4a4c067acec04ac361627f66ecc8/google-http-client-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="d441fc58329c4a4c067acec04ac361627f66ecc8">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/18.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.oauth-client/google-oauth-client/1.22.0/1d63f369ac78e4838a3197147012026e791008cb/google-oauth-client-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="1d63f369ac78e4838a3197147012026e791008cb">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/16.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.0.aar/372a217503316544a5d0c075e1c191b4/jars/libs/internal_impl-23.0.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8bd336eeae661e8311330284897ee07f8ebaa297">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/6.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-android/1.22.0/6d1e1a76a16a244ab2f41775791be1dd0ec2878a/google-http-client-android-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="6d1e1a76a16a244ab2f41775791be1dd0ec2878a">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/9.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-android/1.22.0/7a0fe12b7d8189a821934d6f9d6586d00180e461/google-api-client-android-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="7a0fe12b7d8189a821934d6f9d6586d00180e461">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/8.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/transforms-1/files-1.1/support-v4-23.0.0.aar/372a217503316544a5d0c075e1c191b4/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8413c27b45b7fe61dca4a98159f65e2cee215f5a">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-gson/1.22.0/826b874fa410a8135b7094c469951bf0dadb0c10/google-http-client-gson-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="826b874fa410a8135b7094c469951bf0dadb0c10">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/12.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.mcxiaoke.volley/library/1.0.18/38da306aafee11459cd935a01d2c92a98dc670a4/library-1.0.18.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="38da306aafee11459cd935a01d2c92a98dc670a4">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/11.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.http-client/google-http-client-jackson2/1.22.0/cc014d64ae11117e159d334c99d9c246d9b36f44/google-http-client-jackson2-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="cc014d64ae11117e159d334c99d9c246d9b36f44">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/17.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client/1.22.0/244350c0c845c583717ade13f5666a452fd0cfa/google-api-client-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="0244350c0c845c583717ade13f5666a452fd0cfa">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/15.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.apis/google-api-services-youtube/v3-rev120-1.19.0/9befa937f06683ea4b038fc8667ec41f4480677f/google-api-services-youtube-v3-rev120-1.19.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="9befa937f06683ea4b038fc8667ec41f4480677f">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/7.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/transforms-1/files-1.1/appcompat-v7-23.0.0.aar/360ba281633630fc6f8e0611c3fc55f7/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="4fcf0b1879f8caf497c073e1432d398e9e2988c1">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/4.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.api-client/google-api-client-gson/1.22.0/ca557a4630f5d4690f008fe32231c7f41701c35d/google-api-client-gson-1.22.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="ca557a4630f5d4690f008fe32231c7f41701c35d">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/10.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.fasterxml.jackson.core/jackson-core/2.1.3/f6c3aed1cdfa21b5c1737c915186ea93a95a58bd/jackson-core-2.1.3.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="f6c3aed1cdfa21b5c1737c915186ea93a95a58bd">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/21.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/transforms-1/files-1.1/design-23.0.0.aar/07c851161ee2e5fcc92f73c5b9bce682/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="8a5238e4bdcd6568b82db669d41817de670586b8">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/2.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/usr/local/android-studio/gradle/m2repository/com/google/code/gson/gson/2.3/gson-2.3.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/13.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/modules-2/files-2.1/com.google.guava/guava-jdk5/17.0/463f8378feba44df7ba7cd9272d01837dad62b36/guava-jdk5-17.0.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="463f8378feba44df7ba7cd9272d01837dad62b36">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/20.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/transforms-1/files-1.1/play-services-plus-7.8.0.aar/ceea680992c17d3ea5d7ebe8a93f2fca/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="2491ae1b2a848af1f4f0c795f3117c1bd6a1989f">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/1.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/rashi/.gradle/caches/transforms-1/files-1.1/play-services-base-7.8.0.aar/f0c5c64092f4fb300b1c9cde1a133a63/jars/classes.jar"
+        jumboMode="false"
+        min-sdk-version="16"
+        optimize="true"
+        revision="25.0.0"
+        sha1="c0c912d58c9468b1f9d9769c8975afdf2c85d681">
+        <dex dex="/home/rashi/StudioProjects/yt-watchme/app/build/intermediates/transforms/preDex/release/3.jar" />
+    </item>
+
+</items>
