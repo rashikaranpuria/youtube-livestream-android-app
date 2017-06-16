@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/home/rashi/StudioProjects/allbits-watchme/app/build/intermediates/incremental-classes/release/instant-run-bootstrap.jar
+FILE_HASH=c8ced195a38b4e7305d39889ce8dbc31f1256fcc
+DX_VERSION=1.13
+JUMBO_MODE=true
+OPTIMIZE=true
