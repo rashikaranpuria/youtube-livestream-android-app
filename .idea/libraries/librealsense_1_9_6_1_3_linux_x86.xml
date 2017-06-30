@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="librealsense-1.9.6-1.3-linux-x86">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco.javacpp-presets/librealsense/1.9.6-1.3/29ab56c862879f1f3096a995f54ab2e5f99d1941/librealsense-1.9.6-1.3-linux-x86.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

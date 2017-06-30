@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libdc1394-2.2.4-1.3-linux-armhf">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco.javacpp-presets/libdc1394/2.2.4-1.3/3f8fce4947d727fcc228335fa30718beba2909af/libdc1394-2.2.4-1.3-linux-armhf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

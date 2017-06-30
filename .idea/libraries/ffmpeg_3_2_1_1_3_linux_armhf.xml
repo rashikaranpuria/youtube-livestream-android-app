@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="ffmpeg-3.2.1-1.3-linux-armhf">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco.javacpp-presets/ffmpeg/3.2.1-1.3/e3c5702e51271fdaa6dbf589981e36071a1727ef/ffmpeg-3.2.1-1.3-linux-armhf.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

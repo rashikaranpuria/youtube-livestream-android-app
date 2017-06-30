@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="opencv-3.2.0-1.3-windows-x86_64">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco.javacpp-presets/opencv/3.2.0-1.3/8078a64309b575ef2cfb6b369eef61f30580bd65/opencv-3.2.0-1.3-windows-x86_64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

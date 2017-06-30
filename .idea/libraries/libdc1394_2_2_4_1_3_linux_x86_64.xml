@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libdc1394-2.2.4-1.3-linux-x86_64">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco.javacpp-presets/libdc1394/2.2.4-1.3/59048b9e6b9c27dd746d09fba49d045328e09ced/libdc1394-2.2.4-1.3-linux-x86_64.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
