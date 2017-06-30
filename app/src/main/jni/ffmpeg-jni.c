@@ -230,7 +230,7 @@ Audio bitrate:	128 Kbps stereo
     audio_codec_ctx->profile = FF_PROFILE_AAC_LOW;
     //GS NBG !!! audio_codec_ctx->profile = AV_CODEC_ID_MP3;
 
-    audio_codec_ctx->sample_fmt = AV_SAMPLE_FMT_FLT;
+    audio_codec_ctx->sample_fmt = AV_SAMPLE_FMT_S16;
     audio_codec_ctx->sample_rate = 44100;
   
     LOGI("Opening audio codec");

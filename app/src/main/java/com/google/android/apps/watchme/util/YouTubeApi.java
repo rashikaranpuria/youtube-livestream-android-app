@@ -190,7 +190,7 @@ public class YouTubeApi {
     public static void endEvent(YouTube youtube, String broadcastId)
             throws IOException {
         Transition transitionRequest = youtube.liveBroadcasts().transition(
-                "completed", broadcastId, "status");
+                "complete", broadcastId, "status");
         transitionRequest.execute();
     }
 

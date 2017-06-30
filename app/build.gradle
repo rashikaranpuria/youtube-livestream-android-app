@@ -5,7 +5,7 @@ android {
         config {
             keyAlias 'keystore'
             keyPassword '1rak1esh'
-            storeFile file('/home/rashi/StudioProjects/yt-watchme/keystore.jks')
+            storeFile file('/home/rashi/StudioProjects/allbits-watchme/keystore.jks')
             storePassword '1rak1esh'
         }
     }
