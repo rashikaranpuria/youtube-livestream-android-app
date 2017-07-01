@@ -28,6 +28,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 
 import com.android.volley.toolbox.ImageLoader;
@@ -73,6 +74,8 @@ public class MainActivity extends Activity implements
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
+
         getWindow().requestFeature(Window.FEATURE_INDETERMINATE_PROGRESS);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
@@ -106,6 +109,7 @@ public class MainActivity extends Activity implements
         Intent intent = new Intent(getApplicationContext(),
                 StreamerActivity.class);
         intent.putExtra(YouTubeApi.RTMP_URL_KEY, event.getIngestionAddress());
+//        Log.d(TAG, event.getIngestionAddress());
         intent.putExtra(YouTubeApi.BROADCAST_ID_KEY, broadcastId);
 
         startActivityForResult(intent, REQUEST_STREAMER);

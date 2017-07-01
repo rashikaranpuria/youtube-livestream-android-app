@@ -1,0 +1,6 @@
+COMMAND=PREDEX_LIBRARY_TO_DEX_ARCHIVE
+FILE_PATH=/home/rashi/StudioProjects/allbits-watchme/library/build/intermediates/intermediate-jars/debug/classes.jar
+FILE_HASH=c57a163b2badf4c5a611e4f25153ebe662e8b26c
+DX_VERSION=1.13
+JUMBO_MODE=false
+OPTIMIZE=true

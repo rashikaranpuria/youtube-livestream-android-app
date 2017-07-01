@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="opencv-3.2.0-1.3-linux-armhf">
-    <CLASSES>
-      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.bytedeco.javacpp-presets/opencv/3.2.0-1.3/7fdd60baeb95fc02f5714de4e5882035d892bd06/opencv-3.2.0-1.3-linux-armhf.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
