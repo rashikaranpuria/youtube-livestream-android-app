@@ -1,7 +1,7 @@
 YouTube WatchMe for Android
 ===========
 
-The code is a reference implementation for an Android OS application that creates a YouTube Live Streaming event and streams into that event.
+The code is a build up on Youtube's watch me app.
 
 For more information, you can read the [Youtube API blog post](http://apiblog.youtube.com/2013/08/heres-my-playlist-so-submit-video-maybe.html).
 
@@ -9,15 +9,16 @@ This application utilizes [YouTube Data API v3](https://developers.google.com/yo
 
 To use this application,
 
-1. In your [Google Developers Console](https://console.developers.google.com),
- 1. Enable the YouTube Data API v3 and Google+ API.
- 1. Create a client ID for Android, using your SHA1 and package name.
-1. [Enable YouTube Live Streaming for your channel](https://support.google.com/youtube/answer/2474026?hl=en).
-1. Update the [JNI code](https://github.com/youtube/yt-watchme/blob/master/app/src/main/jni/ffmpeg-jni.c) with respect to [Live Streaming Guide](https://support.google.com/youtube/answer/2853702?hl=en).
-1. Include cross-platform compiled streaming libraries.
- 1. Either [libffmpeg.so](https://trac.ffmpeg.org/wiki/CompilationGuide/Android) under src/main/jniLibs/armeabi,
- 1. or another streaming library with modifying VideoStreamingInterface
-
-![alt tag](http://i59.tinypic.com/e8spqu.png)
-
-![alt tag](http://i61.tinypic.com/16behq1.png)
+1. Sign in to your google account,
+ 1. Create a new live event by clicking the button.
+ 1. Click Refresh from menu on top right of the screen.
+1. Choose the last event created by clicking it.
+1. To start streaming click on Go Live.
+1. It takes more than a minute or two to reflect the video on youtube (latency in live streaming).
+1. Click on switch cam to switch the phone cameras
+ 1. Click Stop to stop streaming.
+ 1. Click End Event to to end the live event
+ 
+ 
+ Courtesy: https://github.com/begeekmyfriend/yasea
+ and https://github.com/youtube/yt-watchme
