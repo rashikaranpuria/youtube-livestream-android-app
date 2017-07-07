@@ -51,6 +51,8 @@ import java.util.Arrays;
 import java.util.Date;
 import java.util.List;
 
+import timber.log.Timber;
+
 /**
  * @author Ibrahim Ulukaya <ulukaya@google.com>
  *         <p/>
@@ -59,7 +61,7 @@ import java.util.List;
 public class MainActivity extends Activity implements
         EventsListFragment.Callbacks {
     public static final String ACCOUNT_KEY = "AIzaSyB-rQ6A4lFhIBdmcavwYGBue0LiQyH5mkc";
-    public static final String APP_NAME = "WatchMe";
+    public static final String APP_NAME = "Gashuku";
     private static final int REQUEST_GOOGLE_PLAY_SERVICES = 0;
     private static final int REQUEST_GMS_ERROR_DIALOG = 1;
     private static final int REQUEST_ACCOUNT_PICKER = 2;
@@ -109,7 +111,8 @@ public class MainActivity extends Activity implements
         Intent intent = new Intent(getApplicationContext(),
                 StreamerActivity.class);
         intent.putExtra(YouTubeApi.RTMP_URL_KEY, event.getIngestionAddress());
-//        Log.d(TAG, event.getIngestionAddress());
+        Timber.d("watch Uri: " + event.getWatchUri());
+        Log.d("watch", event.getWatchUri());
         intent.putExtra(YouTubeApi.BROADCAST_ID_KEY, broadcastId);
 
         startActivityForResult(intent, REQUEST_STREAMER);
@@ -118,13 +121,18 @@ public class MainActivity extends Activity implements
 
     private void getLiveEvents() {
         if (mChosenAccountName == null) {
-            return;
+            chooseAccount();
         }
         new GetLiveEventsTask().execute();
     }
 
     public void createEvent(View view) {
-        new CreateLiveEventTask().execute();
+        if (mChosenAccountName == null) {
+            chooseAccount();
+        }
+        else {
+            new CreateLiveEventTask().execute();
+        }
     }
 
     private void ensureLoader() {
@@ -369,6 +377,9 @@ public class MainActivity extends Activity implements
             buttonCreateEvent.setEnabled(true);
 
             progressDialog.dismiss();
+            Log.d("MainActivity", fetchedEvents.size() + " ");
+            EventData e = fetchedEvents.get(fetchedEvents.size() - 1);
+            Log.d("MainActivity", ": " + e.getId() + " " + e.getTitle());
         }
     }
 

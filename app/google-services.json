@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "805992039051",
+    "firebase_url": "https://allbits-watchme.firebaseio.com",
+    "project_id": "allbits-watchme",
+    "storage_bucket": "allbits-watchme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:805992039051:android:8fd16034fd05b25c",
+        "android_client_info": {
+          "package_name": "com.google.android.apps.watchme"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "805992039051-ik93rtk56b9mt8ap52cd97414tvrickp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa7cVjDR7HB0ar7049v-0_xJqRhS9dH7s"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

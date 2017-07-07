@@ -14,31 +14,31 @@
 
 package com.google.android.apps.watchme;
 
-import android.Manifest;
+import android.accounts.AccountManager;
 import android.app.Activity;
-import android.content.ComponentName;
-import android.content.Context;
+import android.app.ProgressDialog;
 import android.content.Intent;
-import android.content.ServiceConnection;
-import android.content.SharedPreferences;
-import android.content.pm.PackageManager;
 import android.content.res.Configuration;
 import android.hardware.Camera;
+import android.os.AsyncTask;
 import android.os.Bundle;
-import android.os.IBinder;
-import android.os.PowerManager;
-import android.support.design.widget.Snackbar;
-import android.support.v4.app.ActivityCompat;
 import android.util.Log;
 import android.view.View;
-import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.Toast;
-import android.widget.ToggleButton;
 
 import com.github.faucamp.simplertmp.RtmpHandler;
+import com.google.android.apps.watchme.util.EventData;
 import com.google.android.apps.watchme.util.Utils;
 import com.google.android.apps.watchme.util.YouTubeApi;
+import com.google.api.client.extensions.android.http.AndroidHttp;
+import com.google.api.client.googleapis.extensions.android.gms.auth.GoogleAccountCredential;
+import com.google.api.client.googleapis.extensions.android.gms.auth.UserRecoverableAuthIOException;
+import com.google.api.client.http.HttpTransport;
+import com.google.api.client.json.JsonFactory;
+import com.google.api.client.json.gson.GsonFactory;
+import com.google.api.client.util.ExponentialBackOff;
+import com.google.api.services.youtube.YouTube;
 
 import net.ossrs.yasea.SrsCameraView;
 import net.ossrs.yasea.SrsEncodeHandler;
@@ -47,8 +47,11 @@ import net.ossrs.yasea.SrsRecordHandler;
 
 import java.io.IOException;
 import java.net.SocketException;
-import java.util.ArrayList;
-import java.util.List;
+import java.util.Arrays;
+
+import timber.log.Timber;
+
+import static com.google.android.apps.watchme.MainActivity.APP_NAME;
 
 
 public class StreamerActivity extends Activity implements SrsEncodeHandler.SrsEncodeListener, RtmpHandler.RtmpListener, SrsRecordHandler.SrsRecordListener {
@@ -63,10 +66,14 @@ public class StreamerActivity extends Activity implements SrsEncodeHandler.SrsEn
     private Button btnPublish;
     private Button btnSwitchCamera;
     private Button btnEndEvent;
+    private GoogleAccountCredential credential;
+    boolean one = false;
+
+
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        Log.d(MainActivity.APP_NAME, "onCreate");
+        Log.d(APP_NAME, "onCreate");
         super.onCreate(savedInstanceState);
         setContentView(R.layout.streamer);
 
@@ -79,10 +86,10 @@ public class StreamerActivity extends Activity implements SrsEncodeHandler.SrsEn
         rtmpUrl = getIntent().getStringExtra(YouTubeApi.RTMP_URL_KEY);
 
         if (rtmpUrl == null) {
-            Log.w(MainActivity.APP_NAME, "No RTMP URL was passed in; bailing.");
+            Log.w(APP_NAME, "No RTMP URL was passed in; bailing.");
             finish();
         }
-        Log.i(MainActivity.APP_NAME, String.format("Got RTMP URL '%s' from calling activity.", rtmpUrl));
+        Log.i(APP_NAME, String.format("Got RTMP URL '%s' from calling activity.", rtmpUrl));
 
         mPublisher = new SrsPublisher((SrsCameraView) findViewById(R.id.glsurfaceview_camera));
         mPublisher.setEncodeHandler(new SrsEncodeHandler(this));
@@ -97,7 +104,6 @@ public class StreamerActivity extends Activity implements SrsEncodeHandler.SrsEn
             @Override
             public void onClick(View v) {
                 if (btnPublish.getText().toString().contentEquals("Go Live!")) {
-
                     mPublisher.startPublish(rtmpUrl);
                     mPublisher.startCamera();
                     btnPublish.setText("Stop");
@@ -122,21 +128,29 @@ public class StreamerActivity extends Activity implements SrsEncodeHandler.SrsEn
                 endEvent(v);
             }
         });
+
+        credential = GoogleAccountCredential.usingOAuth2(
+                getApplicationContext(), Arrays.asList(Utils.SCOPES));
+        // set exponential backoff policy
+        credential.setBackOff(new ExponentialBackOff());
+
+        //start live
+        btnPublish.performClick();
     }
 
     @Override
     protected void onResume() {
-        Log.d(MainActivity.APP_NAME, "onResume");
+        Log.d(APP_NAME, "onResume");
 
         super.onResume();
         final Button btn = (Button) findViewById(R.id.publish);
         btn.setEnabled(true);
-        mPublisher.resumeRecord();
+//        mPublisher.resumeRecord();
     }
 
     @Override
     protected void onPause() {
-        Log.d(MainActivity.APP_NAME, "onPause");
+        Log.d(APP_NAME, "onPause");
 
         super.onPause();
         mPublisher.pauseRecord();
@@ -144,7 +158,7 @@ public class StreamerActivity extends Activity implements SrsEncodeHandler.SrsEn
 
     @Override
     protected void onDestroy() {
-        Log.d(MainActivity.APP_NAME, "onDestroy");
+        Log.d(APP_NAME, "onDestroy");
 
         super.onDestroy();
         mPublisher.stopPublish();
@@ -303,5 +317,65 @@ public class StreamerActivity extends Activity implements SrsEncodeHandler.SrsEn
         } catch (Exception e1) {
             //
         }
+    }
+
+    public void startStreaming(String broadcastId) {
+
+        new StartEventTask().execute(broadcastId);
+
+    }
+
+    private class StartEventTask extends AsyncTask<String, Void, Void> {
+        private ProgressDialog progressDialog;
+
+        @Override
+        protected void onPreExecute() {
+            progressDialog = ProgressDialog.show(StreamerActivity.this, null,
+                    getResources().getText(R.string.startingEvent), true);
+        }
+
+        final HttpTransport transport = AndroidHttp.newCompatibleTransport();
+        final JsonFactory jsonFactory = new GsonFactory();
+
+        @Override
+        protected Void doInBackground(String... params) {
+            YouTube youtube = new YouTube.Builder(transport, jsonFactory,
+                    credential).setApplicationName("Watchme")
+                    .build();
+            try {
+                YouTubeApi.startEvent(youtube, params[0]);
+            } catch (UserRecoverableAuthIOException e) {
+                startActivityForResult(e.getIntent(), 3);
+            } catch (IOException e) {
+                Log.e(APP_NAME, "", e);
+            }
+            return null;
+        }
+
+        @Override
+        protected void onPostExecute(Void param) {
+            progressDialog.dismiss();
+            mPublisher.startPublish(rtmpUrl);
+            mPublisher.startCamera();
+            btnPublish.setText("Stop");
+        }
+
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        switch (requestCode) {
+            case 3:
+                if (resultCode != Activity.RESULT_OK) {
+                    chooseAccount();
+                }
+                break;
+        }
+    }
+
+    private void chooseAccount() {
+        startActivityForResult(credential.newChooseAccountIntent(),
+                2);
     }
 }

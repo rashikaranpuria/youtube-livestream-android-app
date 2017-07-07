@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- For theme -->
+    <color name="colorPrimary">#ffffff</color>
+    <color name="colorPrimaryDark">#00ACC1</color>
+
+    <!-- Accent (Cyan) -->
+    <color name="colorAccent">#00BCD4</color>
+    <color name="colorAccent_50">#e0f7fa</color>
+    <color name="colorAccent_200">#80DEEA</color>
+    <color name="colorAccent_300">#4DD0E1</color>
+    <color name="colorAccent_400">#26C6DA</color>
+    <color name="colorAccent_500">#00BCD4</color>
+    <color name="colorAccent_600">#00ACC1</color>
+    <color name="colorAccent_700">#0097A7</color>
+    <color name="colorAccent_800">#00838F</color>
+    <color name="Cyan_A_200">#18FFFF</color>
+    <color name="colorControlActivated">#4DD0E1</color>
+
+
+
+    <color name="light_blue_200">#81D4FA</color>
+    <color name="light_blue_300">#4FC3F7</color>
+    <color name="light_blue_400">#29B6F6</color>
+    <color name="light_blue_500">#03A9F4</color>
+    <color name="light_blue_600">#039BE5</color>
+    <color name="light_blue_700">#0288D1</color>
+    <color name="light_blue_800">#0277BD</color>
+
+    <!-- Text -->
+    <color name="primary_text_light">#757575</color>
+
+    <!-- Grey -->
+    <color name="grey_50">#fff3f3f3</color>
+    <color name="grey_100">#F5F5F5</color>
+    <color name="grey_300">#E0E0E0</color>
+    <color name="grey_500">#9E9E9E</color>
+    <color name="grey_600">#757575</color>
+    <color name="grey_700">#616161</color>
+    <color name="grey_800">#424242</color>
+
+    <!-- Transparent -->
+    <color name="transDark">#87000000</color>
+    <color name="transDarkLight">#55303030</color>
+    <color name="transLight">#df919191</color>
+    <color name="transparent">#00ffffff</color>
+    <color name="transWhite">#d8ffffff</color>
+    <color name="transLighter">#e1e1e1</color>
+
+    <color name="white">#ffffff</color>
+
+    <!-- Pink -->
+    <color name="pink_50">#FCE4EC</color>
+    <color name="pink_200">#F48FB1</color>
+    <color name="pink_300">#F06292</color>
+    <color name="pink_400">#EC407A</color>
+    <color name="pink_500">#E91E63</color>
+    <color name="pink_600">#D81B60</color>
+    <color name="pink_700">#C2185B</color>
+    <color name="pink_800">#AD1457</color>
+
+    <!-- Screens background color-->
+    <color name="bg_screen1">@color/pink_300</color>
+    <color name="bg_screen2">@color/light_blue_400</color>
+    <color name="bg_screen3">@color/colorAccent_400</color>
+
+    <!-- dots inactive colors -->
+    <color name="dot_dark_screen1">@color/pink_700</color>
+    <color name="dot_dark_screen2">@color/light_blue_700</color>
+    <color name="dot_dark_screen3">@color/colorAccent_700</color>
+
+    <color name="dot_light_screen1">#f98da5</color>
+    <color name="dot_light_screen2">#8cf9eb</color>
+    <color name="dot_light_screen3">#93c6fd</color>
+
+    <array name="array_dot_active">
+        <item>@color/dot_light_screen1</item>
+        <item>@color/dot_light_screen2</item>
+        <item>@color/dot_light_screen3</item>
+    </array>
+
+    <array name="array_dot_inactive">
+        <item>@color/dot_dark_screen1</item>
+        <item>@color/dot_dark_screen2</item>
+        <item>@color/dot_dark_screen3</item>
+    </array>
+
+</resources>

@@ -66,6 +66,7 @@
         android:paddingLeft="16dp"
         android:paddingRight="16dp"
         plus:annotation="inline"
-        plus:size="standard" />
+        plus:size="standard"
+        android:visibility="gone"/>
 
 </LinearLayout>

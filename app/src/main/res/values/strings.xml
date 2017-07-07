@@ -34,7 +34,7 @@
     <string name="streamingOn">STREAMING</string>
     <string name="streamingOff">PAUSED</string>
     <string name="startEvent">START EVENT</string>
-    <string name="endEvent">END EVENT</string>
+    <string name="endEvent">End Event</string>
     <string name="startingEvent">Starting event. Please wait…</string>
     <string name="endingEvent">Ending event. Please wait…</string>
     <string name="videoThumbnail">video thumbnail</string>

@@ -150,6 +150,7 @@ public class YouTubeApi {
                 .liveBroadcasts().list("id,snippet,contentDetails");
         // liveBroadcastRequest.setMine(true);
         liveBroadcastRequest.setBroadcastStatus("upcoming");
+        liveBroadcastRequest.setMaxResults(50L);
 
         // List request is executed and list of broadcasts are returned
         LiveBroadcastListResponse returnedListResponse = liveBroadcastRequest.execute();
@@ -170,6 +171,7 @@ public class YouTubeApi {
             }
             resultList.add(event);
         }
+        Log.d("YouTubeApi", resultList.size() + " ");
         return resultList;
     }
 
@@ -179,7 +181,7 @@ public class YouTubeApi {
         try {
             Thread.sleep(10000);
         } catch (InterruptedException e) {
-            Log.e(MainActivity.APP_NAME, "", e);
+            Log.e(MainActivity.APP_NAME, "Watch me", e);
         }
 
         Transition transitionRequest = youtube.liveBroadcasts().transition(
