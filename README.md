@@ -1,4 +1,4 @@
-YouTube WatchMe for Android
+[Deprecated]YouTube WatchMe for Android
 ===========
 
 The code is a reference implementation for an Android OS application that creates a YouTube Live Streaming event and streams into that event.
@@ -11,3 +11,5 @@ To use this application,
  1. Enable the YouTube Data API v3 and Google+ API.
  1. Create a client ID for Android, using your SHA1 and package name.
 1. [Enable YouTube Live Streaming for your channel](https://support.google.com/youtube/answer/2474026?hl=en).
+
+This is porject is not actively maintained.
