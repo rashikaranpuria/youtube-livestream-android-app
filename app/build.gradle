@@ -4,9 +4,9 @@ android {
     signingConfigs {
         config {
             keyAlias 'keystore'
-            keyPassword '1rak1esh'
+            keyPassword '123'
             storeFile file('/home/rashi/StudioProjects/allbits-watchme/keystore.jks')
-            storePassword '1rak1esh'
+            storePassword '123'
         }
     }
     compileSdkVersion 22
